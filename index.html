@@ -285,7 +285,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 40px;
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
@@ -443,13 +443,13 @@
         }
 
         .info-list {
-            margin: 20px 0;
+            margin: 15px 0;
             padding-left: 20px;
         }
 
         .info-list li {
             margin-bottom: 8px;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: var(--text-main);
         }
 
@@ -619,6 +619,20 @@
                 <button class="btn-secondary">Saber más y comprar</button>
             </div>
 
+            <!-- NUEVA TARJETA: POTASIO -->
+            <div class="product-card" onclick="openModal('potasio')">
+                <div>
+                    <span class="product-tag">Superalimento • Apto Vegano</span>
+                    <div class="product-image-wrapper">
+                        <img src="Potasio de Natier.webp" alt="Potasio Natier">
+                    </div>
+                    <h3 class="product-name">Potasio Natier</h3>
+                    <p class="product-desc">Mineral esencial de fórmula limpia ideal para prevenir calambres, reducir fatiga y regular la presión arterial de forma segura.</p>
+                    <p style="font-family: var(--font-sans); font-size: 1.25rem; font-weight: 600; color: var(--text-main); margin-top: 15px;">$25.499</p>
+                </div>
+                <button class="btn-secondary">Saber más y comprar</button>
+            </div>
+
         </div>
     </section>
 
@@ -648,12 +662,10 @@
                     <p class="product-desc" style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted);">Apto Vegano • Cruelty Free • Libre de Gluten • 50 Cápsulas</p>
                     <div class="price">$26.499</div>
                     
-                    <!-- NUEVOS BOTONES DE PAGO MAGNESIO -->
                     <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 15px;">
                         <a href="https://mpago.la/2HKQXpP" class="btn-primary" style="text-align: center; background-color: #009EE3; box-shadow: 0 4px 15px rgba(0, 158, 227, 0.2);" target="_blank">Comprar con Mercado Pago</a>
                         <a href="https://wa.me/5491135663274?text=Hola!%20Me%20interesa%20comprar%20el%20Citrato%20de%20Magnesio%20en%20cápsulas%20Natier%20a%20$26.499." class="btn-secondary" style="margin-top: 0;" target="_blank">Consultar por WhatsApp</a>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -680,12 +692,45 @@
                     <p class="product-desc" style="font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted);">Apto Vegano • Sin TACC • Cruelty Free • 50 Cápsulas</p>
                     <div class="price">$27.499</div>
                     
-                    <!-- NUEVOS BOTONES DE PAGO CURCUMA -->
                     <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 15px;">
                         <a href="https://mpago.la/1nZ2kco" class="btn-primary" style="text-align: center; background-color: #009EE3; box-shadow: 0 4px 15px rgba(0, 158, 227, 0.2);" target="_blank">Comprar con Mercado Pago</a>
                         <a href="https://wa.me/5491135663274?text=Hola!%20Me%20interesa%20comprar%20la%20Cúrcuma%20%2B%20Pimienta%20Negra%20en%20cápsulas%20Natier%20a%20$27.499." class="btn-secondary" style="margin-top: 0;" target="_blank">Consultar por WhatsApp</a>
                     </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- NUEVA VENTANA EMERGENTE: POTASIO CON DESCRIPCIÓN DETALLADA -->
+        <div class="modal-container" id="modal-potasio">
+            <button class="modal-close-btn" onclick="forceClose()">&times;</button>
+            <div class="modal-content-layout">
+                <div class="modal-img-wrapper">
+                    <img src="Potasio de Natier.webp" alt="Potasio Natier">
+                </div>
+                <div class="modal-info">
+                    <span class="product-tag">Apto Vegano • Sin TACC • Libre de Lactosa</span>
+                    <h3>Potasio Natier</h3>
+                    <p class="product-desc"><strong>Mineral Esencial para Calambres y Presión.</strong> Un electrolito clave que participa en la contracción muscular, el funcionamiento nervioso, el equilibrio hídrico y la regulación de la presión arterial.</p>
+                    
+                    <p style="font-weight: 500; margin-top: 10px;">Beneficios principales:</p>
+                    <ul class="info-list">
+                        <li>Previene calambres y contracturas musculares.</li>
+                        <li>Ayuda a regular la presión arterial.</li>
+                        <li>Mejora la función muscular y nerviosa.</li>
+                        <li>Aporta energía y favorece la recuperación post entrenamiento.</li>
+                        <li>Reduce la fatiga muscular y el agotamiento físico.</li>
+                        <li>Favorece el equilibrio de líquidos en el organismo.</li>
+                    </ul>
+
+                    <p class="product-desc" style="font-size: 0.9rem;"><strong>Modo de uso:</strong> Tomar 1 cápsula por día con un vaso de agua, preferentemente antes de una comida.</p>
+
+                    <p class="product-desc" style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); margin-top: 10px;">50 Cápsulas Vegetales • Industria Argentina (Aprobado ANMAT) • Sin Conservantes</p>
+                    <div class="price">$25.499</div>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 15px;">
+                        <a href="LINK_MERCADO_PAGO_POTASIO_AQUI" class="btn-primary" style="text-align: center; background-color: #009EE3; box-shadow: 0 4px 15px rgba(0, 158, 227, 0.2);" target="_blank">Comprar con Mercado Pago</a>
+                        <a href="https://wa.me/5491135663274?text=Hola!%20Me%20interesa%20comprar%20el%20Potasio%20Natier%20en%20cápsulas%20a%20$25.499." class="btn-secondary" style="margin-top: 0;" target="_blank">Consultar por WhatsApp</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -704,15 +749,13 @@
         let currentIdx = 0;
         const wrapper = document.getElementById('sliderWrapper');
         const dots = document.querySelectorAll('.dot');
-        const totalSlides = 2; // Cantidad de banners que tenemos
+        const totalSlides = 2;
 
-        // Cambio automático cada 6 segundos
         let autoSlideInterval = setInterval(() => { moveSlide(1); }, 6000);
 
         function updateSlider() {
             wrapper.style.transform = `translateX(-${currentIdx * 100}%)`;
             
-            // Actualizar indicadores (puntos)
             dots.forEach((dot, index) => {
                 if(index === currentIdx) {
                     dot.classList.add('active');
