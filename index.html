@@ -346,6 +346,81 @@
             line-height: 1.5;
         }
 
+        /* --- PREGUNTAS FRECUENTES (FAQ) --- */
+        .faq-section {
+            padding: 80px 10%;
+            background-color: #ffffff;
+        }
+
+        .faq-title {
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
+            text-align: center;
+            color: var(--accent-color);
+            margin-bottom: 50px;
+            font-weight: 600;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: var(--card-bg);
+            border: 1px solid #eae7e2;
+            border-radius: 8px;
+            padding: 20px 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .faq-item summary {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--accent-color);
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            outline: none;
+        }
+
+        /* Ocultar la flecha por defecto de details en Safari/Chrome */
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-item summary::after {
+            content: '\2304'; /* Icono de flecha hacia abajo */
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--accent-color);
+            transition: transform 0.3s ease;
+            margin-left: 10px;
+        }
+
+        .faq-item[open] summary::after {
+            transform: rotate(180deg);
+        }
+
+        .faq-content {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #f0f0f0;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
         /* --- VENTANA EMERGENTE MODAL (INFO PRODUCTOS) --- */
         .modal-overlay {
             position: fixed;
@@ -610,6 +685,7 @@
                 margin-top: 30px;
             }
             .products-section { padding: 60px 5%; }
+            .faq-section { padding: 60px 5%; }
             .modal-content-layout { grid-template-columns: 1fr; gap: 20px; }
             .modal-img-wrapper { height: 200px; }
             .whatsapp-float { bottom: 20px; right: 20px; padding: 12px; }
@@ -643,6 +719,7 @@
         <nav>
             <a href="#">Inicio</a>
             <a href="#productos">Productos</a>
+            <a href="#faq">Preguntas</a>
             <a href="#">Filosofía</a>
         </nav>
     </header>
@@ -735,12 +812,64 @@
         </div>
     </section>
 
+    <!-- NUEVA SECCIÓN DE PREGUNTAS FRECUENTES (FAQ) -->
+    <section class="faq-section" id="faq">
+        <h2 class="faq-title">Preguntas frecuentes</h2>
+        
+        <div class="faq-grid">
+            
+            <details class="faq-item">
+                <summary>¿Cuáles son nuestros productos?</summary>
+                <div class="faq-content">
+                    <p>Ofrecemos una amplia variedad de productos desde suplementos vitamínicos hasta alimentos de la mas alta calidad. Tenemos todo los necesarios para mejorar tu calidad de vida con envíos derecho a tu hogar.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>¿Cómo realizan los envíos?</summary>
+                <div class="faq-content">
+                    <p>Nuestros envíos son realizados principalmente por correo argentino, una vez realizada la compra nosotros informaremos cada paso de movimiento para que usted tenga toda la información disponible actualizada. En caso de querer un método de envío diferente, contactarse con nosotros vía mail o por teléfono.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>¿Por qué elegir Vitalis?</summary>
+                <div class="faq-content">
+                    <p>No solo ofrecemos una gran variedad de productos, si no que facilitamos el envío y priorizamos a nuestros clientes para que reciban los productos que desean a la mayor velocidad y facilidad posible.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>¿Hacen ventas por mayor?</summary>
+                <div class="faq-content">
+                    <p>Sí, ofrecemos ventas por mayor con una atención especializada con un precio especial. Si desea hacer una compra mayorista contactarse vía mail o por teléfono.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>¿De dónde vienen nuestros productos?</summary>
+                <div class="faq-content">
+                    <p>Todos nuestros productos vienen de los mejores fabricantes de productos orgánicos y suplementos del país, ofreciendo una calidad única. Todos nuestros productos pasan por un proceso de revisión antes de entrar a la venta.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>¿Puedo contactarme si tengo dudas sobre los productos?</summary>
+                <div class="faq-content">
+                    <p>Sí, si tiene alguna duda sobre los productos nos puede escribir vía WhatsApp o mail y le mandaremos en detalle la descripción y uso del mismo. También le ofreceremos recomendaciones en base a sus necesidades.</p>
+                </div>
+            </details>
+
+        </div>
+    </section>
+
     <footer>
         <div class="footer-content">
             
             <div class="footer-links">
                 <a href="#">Inicio</a>
                 <a href="#productos">Nuestros Productos</a>
+                <a href="#faq">Preguntas Frecuentes</a>
                 <a href="#">Envíos a todo el país</a>
             </div>
 
