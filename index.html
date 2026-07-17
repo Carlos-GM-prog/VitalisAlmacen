@@ -19,7 +19,7 @@
             --accent-hover: #2b3a31;
             --font-sans: 'Inter', sans-serif;
             --font-serif: 'Playfair Display', serif;
-            --promo-color: #c49a3f; /* Color mostaza de la barra de anuncios */
+            --promo-color: #D9734E; /* Color terracota cálido y llamativo */
         }
 
         * {
@@ -95,7 +95,7 @@
             opacity: 0.7;
         }
 
-        /* --- NUEVA SECCIÓN: CARRUSEL DE BANNERS ESTILO NATIER --- */
+        /* --- CARRUSEL DE BANNERS ESTILO NATIER --- */
         .slider-container {
             position: relative;
             width: 100%;
@@ -241,6 +241,27 @@
             border-radius: 10px;
         }
 
+        /* --- BARRA DE CONFIANZA --- */
+        .trust-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            padding: 25px 10%;
+            background-color: #ffffff;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .trust-item {
+            font-size: 0.95rem;
+            color: var(--text-main);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
         /* --- BOTONES GENERALES --- */
         .btn-primary {
             display: inline-block;
@@ -254,6 +275,8 @@
             letter-spacing: 1px;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(61, 82, 69, 0.15);
+            border: none;
+            cursor: pointer;
         }
 
         .btn-primary:hover {
@@ -286,7 +309,7 @@
 
         /* --- SECCIÓN: PRODUCTOS --- */
         .products-section {
-            padding: 100px 10%;
+            padding: 80px 10%;
             background-color: #f6f4f0;
         }
 
@@ -363,10 +386,71 @@
             line-height: 1.5;
         }
 
+        /* --- TESTIMONIOS (NUEVO) --- */
+        .testimonials-section {
+            padding: 80px 10%;
+            background-color: var(--card-bg);
+        }
+
+        .testimonials-title {
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 50px;
+            font-weight: 400;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background-color: #fcfbfa;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(0,0,0,0.03);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+        }
+
+        .stars {
+            color: #f5b041;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-text {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--text-main);
+            font-size: 0.95rem;
+        }
+
+        .testimonial-verified {
+            font-size: 0.75rem;
+            color: #25d366;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 5px;
+            font-weight: 500;
+        }
+
         /* --- PREGUNTAS FRECUENTES (FAQ) --- */
         .faq-section {
             padding: 80px 10%;
-            background-color: #ffffff;
+            background-color: #f6f4f0;
         }
 
         .faq-title {
@@ -437,7 +521,7 @@
             line-height: 1.6;
         }
 
-        /* --- VENTANA EMERGENTE MODAL (INFO PRODUCTOS) --- */
+        /* --- VENTANAS EMERGENTES Y FORMULARIOS --- */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -544,9 +628,30 @@
             color: var(--text-main);
         }
 
-        /* --- NUEVA SECCIÓN FOOTER (PIE DE PÁGINA) --- */
+        /* --- ESTILOS DEL FORMULARIO NEWSLETTER --- */
+        .form-input {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .form-input:focus {
+            border-color: var(--accent-color);
+        }
+
+        .newsletter-container {
+            background: linear-gradient(180deg, #ffffff 0%, #fcfbfa 100%);
+        }
+
+        /* --- FOOTER (PIE DE PÁGINA) --- */
         footer {
-            background-color: #f6f4f0;
+            background-color: #ffffff;
             padding: 60px 10% 80px; 
             text-align: center;
             border-top: 1px solid rgba(0,0,0,0.05);
@@ -606,7 +711,6 @@
             stroke-linejoin: round;
         }
 
-        /* Diseño de Tarjetas de Pago e Imágenes */
         .footer-badges {
             display: flex;
             flex-direction: column;
@@ -700,7 +804,10 @@
                 height: 35vh;
                 margin-top: 30px;
             }
+            .trust-bar { gap: 15px; padding: 15px 5%; }
+            .trust-item { font-size: 0.8rem; width: 45%; justify-content: flex-start; }
             .products-section { padding: 60px 5%; }
+            .testimonials-section { padding: 60px 5%; }
             .faq-section { padding: 60px 5%; }
             .modal-content-layout { grid-template-columns: 1fr; gap: 20px; }
             .modal-img-wrapper { height: 200px; }
@@ -728,9 +835,9 @@
 </head>
 <body>
 
-    <!-- BARRA DE ANUNCIOS SUPERIOR -->
+    <!-- BARRA DE ANUNCIOS SUPERIOR ACTUALIZADA -->
     <div class="announcement-bar">
-        Envío gratis a partir de AR$ 70000
+        📦 Envío gratis desde AR$ 70.000 | 🤝 ¡Aboná al recibir! (Envío contra entrega)
     </div>
 
     <header>
@@ -785,6 +892,14 @@
         </div>
     </section>
 
+    <!-- NUEVA BARRA DE CONFIANZA -->
+    <div class="trust-bar">
+        <div class="trust-item"><span>✅</span> Aprobado por ANMAT</div>
+        <div class="trust-item"><span>🌱</span> Fórmulas 100% Naturales</div>
+        <div class="trust-item"><span>🚚</span> Envío Contra Entrega</div>
+        <div class="trust-item"><span>🔒</span> Compra Segura</div>
+    </div>
+
     <section class="products-section" id="productos">
         <h2 class="section-title">Nuestras Fórmulas Destacadas</h2>
         <p style="text-align:center; margin-top: -40px; margin-bottom: 40px; color: var(--text-muted); font-size: 0.9rem;">Haz clic sobre cualquier producto para conocer sus beneficios detallados.</p>
@@ -801,7 +916,7 @@
                     <p class="product-desc">Fórmula premium de máxima absorción esencial para el organismo. Ayuda a regular el estrés, los músculos y el sueño.</p>
                     <p style="font-family: var(--font-sans); font-size: 1.25rem; font-weight: 600; color: var(--text-main); margin-top: 15px;">$22.449</p>
                 </div>
-                <button class="btn-secondary">Saber más y comprar</button>
+                <button class="btn-secondary">Saber más y pedir</button>
             </div>
 
             <div class="product-card" onclick="openModal('curcuma')">
@@ -814,7 +929,7 @@
                     <p class="product-desc">Potente antioxidante potenciado con extracto de pimienta negra para incrementar su absorción de forma óptima.</p>
                     <p style="font-family: var(--font-sans); font-size: 1.25rem; font-weight: 600; color: var(--text-main); margin-top: 15px;">$23.399</p>
                 </div>
-                <button class="btn-secondary">Saber más y comprar</button>
+                <button class="btn-secondary">Saber más y pedir</button>
             </div>
 
             <div class="product-card" onclick="openModal('potasio')">
@@ -827,7 +942,7 @@
                     <p class="product-desc">Mineral esencial de fórmula limpia ideal para prevenir calambres, reducir fatiga y regular la presión arterial de forma segura.</p>
                     <p style="font-family: var(--font-sans); font-size: 1.25rem; font-weight: 600; color: var(--text-main); margin-top: 15px;">$18.000</p>
                 </div>
-                <button class="btn-secondary">Saber más y comprar</button>
+                <button class="btn-secondary">Saber más y pedir</button>
             </div>
 
             <div class="product-card" onclick="openModal('aloevera')">
@@ -840,13 +955,39 @@
                     <p class="product-desc">Excelente tónico digestivo con aloe, manzanilla y menta. Actúa eliminando toxinas, aumentando defensas y desinflamando.</p>
                     <p style="font-family: var(--font-sans); font-size: 1.25rem; font-weight: 600; color: var(--text-main); margin-top: 15px;">$14.400</p>
                 </div>
-                <button class="btn-secondary">Saber más y comprar</button>
+                <button class="btn-secondary">Saber más y pedir</button>
             </div>
 
         </div>
     </section>
 
-    <!-- NUEVA SECCIÓN DE PREGUNTAS FRECUENTES (FAQ) -->
+    <!-- NUEVA SECCIÓN DE TESTIMONIOS -->
+    <section class="testimonials-section">
+        <h2 class="testimonials-title">Lo que dicen nuestros clientes</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Desde que tomo el Citrato de Magnesio de Natier duermo de corrido. Y me encantó que pude pagar en efectivo al momento de recibir el paquete en mi casa. ¡Super confiables!"</p>
+                <div class="testimonial-author">María L.</div>
+                <div class="testimonial-verified">✓ Comprador verificado</div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"La Cúrcuma me ayudó muchísimo con los dolores de rodilla. El envío fue rápido y la atención por WhatsApp es excelente, te sacan todas las dudas antes de comprar."</p>
+                <div class="testimonial-author">Carlos R.</div>
+                <div class="testimonial-verified">✓ Comprador verificado</div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Excelente el Potasio. Hago mucho deporte y dejaron de darme calambres. Llegó perfecto por correo y los productos son originales. Muy recomendable la tienda."</p>
+                <div class="testimonial-author">Sofía T.</div>
+                <div class="testimonial-verified">✓ Comprador verificado</div>
+            </div>
+        </div>
+    </section>
+
     <section class="faq-section" id="faq">
         <h2 class="faq-title">Preguntas frecuentes</h2>
         
@@ -896,6 +1037,29 @@
 
         </div>
     </section>
+
+    <!-- POPUP DE SUSCRIPCIÓN (NEWSLETTER) -->
+    <div class="modal-overlay" id="newsletterModal" onclick="closeNewsletter(event)">
+        <!-- Aquí está agregada la clase "active" fundamental para que el CSS lo muestre -->
+        <div class="modal-container newsletter-container active" style="max-width: 450px; text-align: center; padding: 40px 30px;">
+            <button class="modal-close-btn" onclick="forceCloseNewsletter()">&times;</button>
+            
+            <!-- Logo -->
+            <img src="Logo Vitalis.jpeg" alt="Vitalis" style="height: 60px; border-radius: 50%; margin-bottom: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+            
+            <h3 style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--text-main); margin-bottom: 10px;">¡Bienvenido a Vitalis!</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 25px;">Dejanos tu email y llevate un <strong>10% de descuento exclusivo</strong> para tu primera compra.</p>
+            
+            <form id="newsletterForm" onsubmit="submitNewsletter(event)">
+                <input type="email" id="news-email" placeholder="Tu correo electrónico" required class="form-input">
+                <input type="text" id="news-nombre" placeholder="Tu nombre" required class="form-input">
+                <input type="text" id="news-cumple" placeholder="Cumpleaños (DD/MM) - Opcional" class="form-input">
+                
+                <button type="submit" class="btn-primary" style="width: 100%; margin-top: 10px; font-size: 1rem; border: none; cursor: pointer;">Obtener mi descuento</button>
+            </form>
+            <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 15px;">Prometemos no enviar spam. Solo ofertas y bienestar.</p>
+        </div>
+    </div>
 
     <footer>
         <div class="footer-content">
@@ -969,8 +1133,8 @@
                     <div class="price">$22.449</div>
                     
                     <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 15px;">
-                        <a href="https://mpago.la/2pJKiaq" class="btn-primary" style="text-align: center; background-color: #009EE3; box-shadow: 0 4px 15px rgba(0, 158, 227, 0.2);" target="_blank">Comprar con Mercado Pago</a>
-                        <a href="https://wa.me/5491137752826?text=Hola!%20Me%20interesa%20comprar%20el%20Citrato%20de%20Magnesio%20en%20cápsulas%20Natier%20a%20$22.449." class="btn-secondary" style="margin-top: 0;" target="_blank">Consultar por WhatsApp</a>
+                        <a href="https://wa.me/5491137752826?text=Hola!%20Me%20interesa%20pedir%20el%20Citrato%20de%20Magnesio%20a%20$22.449%20con%20envío%20contra%20entrega." class="btn-primary" style="background-color: #25d366; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2); text-align: center;" target="_blank">Pedir y pagar al recibir</a>
+                        <a href="https://mpago.la/2pJKiaq" class="btn-secondary" style="text-align: center; border-color: #009EE3; color: #009EE3;" target="_blank">Pagar ahora con Mercado Pago</a>
                     </div>
                 </div>
             </div>
@@ -999,8 +1163,8 @@
                     <div class="price">$23.399</div>
                     
                     <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 15px;">
-                        <a href="https://mpago.la/2RLbAPh" class="btn-primary" style="text-align: center; background-color: #009EE3; box-shadow: 0 4px 15px rgba(0, 158, 227, 0.2);" target="_blank">Comprar con Mercado Pago</a>
-                        <a href="https://wa.me/5491137752826?text=Hola!%20Me%20interesa%20comprar%20la%20Cúrcuma%20%2B%20Pimienta%20Negra%20en%20cápsulas%20Natier%20a%20$23.399." class="btn-secondary" style="margin-top: 0;" target="_blank">Consultar por WhatsApp</a>
+                        <a href="https://wa.me/5491137752826?text=Hola!%20Me%20interesa%20pedir%20la%20Cúrcuma%20%2B%20Pimienta%20Negra%20a%20$23.399%20con%20envío%20contra%20entrega." class="btn-primary" style="background-color: #25d366; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2); text-align: center;" target="_blank">Pedir y pagar al recibir</a>
+                        <a href="https://mpago.la/2RLbAPh" class="btn-secondary" style="text-align: center; border-color: #009EE3; color: #009EE3;" target="_blank">Pagar ahora con Mercado Pago</a>
                     </div>
                 </div>
             </div>
@@ -1033,8 +1197,8 @@
                     <div class="price">$18.000</div>
                     
                     <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 15px;">
-                        <a href="https://mpago.la/2AsFcXn" class="btn-primary" style="text-align: center; background-color: #009EE3; box-shadow: 0 4px 15px rgba(0, 158, 227, 0.2);" target="_blank">Comprar con Mercado Pago</a>
-                        <a href="https://wa.me/5491137752826?text=Hola!%20Me%20interesa%20comprar%20el%20Potasio%20Natier%20en%20cápsulas%20a%20$18.000." class="btn-secondary" style="margin-top: 0;" target="_blank">Consultar por WhatsApp</a>
+                        <a href="https://wa.me/5491137752826?text=Hola!%20Me%20interesa%20pedir%20el%20Potasio%20Natier%20a%20$18.000%20con%20envío%20contra%20entrega." class="btn-primary" style="background-color: #25d366; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2); text-align: center;" target="_blank">Pedir y pagar al recibir</a>
+                        <a href="https://mpago.la/2AsFcXn" class="btn-secondary" style="text-align: center; border-color: #009EE3; color: #009EE3;" target="_blank">Pagar ahora con Mercado Pago</a>
                     </div>
                 </div>
             </div>
@@ -1065,8 +1229,8 @@
                     <div class="price">$14.400</div>
                     
                     <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 15px;">
-                        <a href="https://mpago.la/1ktWvG4" class="btn-primary" style="text-align: center; background-color: #009EE3; box-shadow: 0 4px 15px rgba(0, 158, 227, 0.2);" target="_blank">Comprar con Mercado Pago</a>
-                        <a href="https://wa.me/5491137752826?text=Hola!%20Me%20interesa%20comprar%20el%20Aloe%20Vera%20Sistema%20Digestivo%20Natier%20a%20$14.400." class="btn-secondary" style="margin-top: 0;" target="_blank">Consultar por WhatsApp</a>
+                        <a href="https://wa.me/5491137752826?text=Hola!%20Me%20interesa%20pedir%20el%20Aloe%20Vera%20Digestivo%20a%20$14.400%20con%20envío%20contra%20entrega." class="btn-primary" style="background-color: #25d366; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2); text-align: center;" target="_blank">Pedir y pagar al recibir</a>
+                        <a href="https://mpago.la/1ktWvG4" class="btn-secondary" style="text-align: center; border-color: #009EE3; color: #009EE3;" target="_blank">Pagar ahora con Mercado Pago</a>
                     </div>
                 </div>
             </div>
@@ -1130,25 +1294,82 @@
 
         function closeModal(event) {
             if (event.target.id === 'modalOverlay') { forceClose(); }
+            if (event.target.id === 'newsletterModal') { forceCloseNewsletter(); }
         }
 
         function forceClose() {
             document.getElementById('modalOverlay').classList.remove('active');
-            const containers = document.querySelectorAll('.modal-container');
+            const containers = document.querySelectorAll('.modal-container:not(.newsletter-container)');
             containers.forEach(container => container.classList.remove('active'));
             document.body.style.overflow = 'auto';
         }
 
-        /* --- LÓGICA NUEVA: ABRIR PRODUCTO DESDE ANUNCIO DE FACEBOOK --- */
+        /* --- ABRIR PRODUCTO DESDE ANUNCIO DE FACEBOOK --- */
         window.addEventListener('DOMContentLoaded', (event) => {
             const urlParams = new URLSearchParams(window.location.search);
             const producto = urlParams.get('prod');
             
             if(producto === 'magnesio' || producto === 'curcuma' || producto === 'potasio' || producto === 'aloevera') {
-                // Abrir el popup correspondiente al producto
                 openModal(producto);
             }
         });
+
+        /* --- LÓGICA DEL POPUP NEWSLETTER --- */
+        document.addEventListener("DOMContentLoaded", () => {
+            // Revisa si el navegador recuerda que ya lo cerraste
+            const hasSeenPopup = localStorage.getItem('vitalis_newsletter_seen');
+            
+            // ESTA LÍNEA ES LA CLAVE PARA PROBAR: Borra la memoria del navegador en cada recarga.
+            // RECUERDA BORRARLA O COMENTARLA (agregando // al inicio) CUANDO PUBLIQUES LA PÁGINA FINAL.
+            localStorage.removeItem('vitalis_newsletter_seen');
+
+            if (!hasSeenPopup) {
+                // Aparece después de 3 segundos (3000 milisegundos)
+                setTimeout(() => {
+                    document.getElementById('newsletterModal').classList.add('active');
+                }, 3000);
+            }
+        });
+
+        function closeNewsletter(event) {
+            if (event.target.id === 'newsletterModal') { 
+                forceCloseNewsletter(); 
+            }
+        }
+
+        function forceCloseNewsletter() {
+            document.getElementById('newsletterModal').classList.remove('active');
+            // Guardamos en la memoria que el usuario ya lo vio para no ser molestos
+            localStorage.setItem('vitalis_newsletter_seen', 'true');
+        }
+
+        function submitNewsletter(event) {
+            event.preventDefault(); // Evita que la página recargue al hacer clic
+
+            // 1. Leemos lo que el cliente escribió en las cajitas
+            const email = document.getElementById('news-email').value;
+            const nombre = document.getElementById('news-nombre').value;
+            const cumple = document.getElementById('news-cumple').value;
+
+            // 2. Armamos el mensaje automático que te va a llegar
+            let mensaje = `¡Hola Vitalis! Me acabo de suscribir. \nMi nombre es: ${nombre} \nMi email es: ${email}`;
+            
+            if(cumple) {
+                mensaje += ` \nMi cumple es el: ${cumple}`;
+            }
+            
+            mensaje += ` \n\n¡Quiero usar mi 10% de descuento (VITALIS10) en mi primera compra!`;
+
+            // 3. Preparamos el link hacia tu número de WhatsApp
+            const numeroWhatsApp = "5491137752826";
+            const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+
+            // 4. Abrimos WhatsApp en una pestaña nueva
+            window.open(urlWhatsApp, '_blank');
+
+            // 5. Cerramos el popup de la pantalla
+            forceCloseNewsletter();
+        }
     </script>
 
 </body>
