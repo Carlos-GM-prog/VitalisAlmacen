@@ -958,6 +958,20 @@
                 <button class="btn-secondary">Saber más y pedir</button>
             </div>
 
+            <!-- NUEVO PRODUCTO VITA BIOSA -->
+            <div class="product-card" onclick="openModal('vitabiosa')">
+                <div>
+                    <span class="product-tag">Probiótico • Equilibrio Intestinal</span>
+                    <div class="product-image-wrapper">
+                        <img src="vita-biosa.webp" alt="VITA BIOSA Naranja">
+                    </div>
+                    <h3 class="product-name">VITA BIOSA Naranja</h3>
+                    <p class="product-desc">Ayuda a restaurar una microbiota saludable, previniendo alteraciones y promoviendo el bienestar digestivo e inmunológico.</p>
+                    <p style="font-family: var(--font-sans); font-size: 1.25rem; font-weight: 600; color: var(--text-main); margin-top: 15px;">$19.800</p>
+                </div>
+                <button class="btn-secondary">Saber más y pedir</button>
+            </div>
+
         </div>
     </section>
 
@@ -1236,6 +1250,31 @@
             </div>
         </div>
 
+        <!-- MODAL DEL NUEVO PRODUCTO VITA BIOSA -->
+        <div class="modal-container" id="modal-vitabiosa">
+            <button class="modal-close-btn" onclick="forceClose()">&times;</button>
+            <div class="modal-content-layout">
+                <div class="modal-img-wrapper">
+                    <img src="vita-biosa.webp" alt="VITA BIOSA Naranja">
+                </div>
+                <div class="modal-info">
+                    <span class="product-tag">Probiótico • Microbiota Saludable</span>
+                    <h3>VITA BIOSA Naranja</h3>
+                    <p class="product-desc"><strong>Crucial para la digestión y defensas.</strong> Los probióticos y postbióticos fortalecen el sistema inmunológico y mejoran la absorción de nutrientes.</p>
+                    
+                    <p style="font-weight: 500; margin-top: 10px;">Descripción detallada:</p>
+                    <p class="product-desc" style="font-size: 0.9rem;">Aunque tradicionalmente se obtienen de alimentos y la naturaleza, el estilo de vida moderno —marcado por el consumo de alimentos procesados, antibióticos, estrés y otros factores— altera el equilibrio natural de la microbiota intestinal, causando disbiosis. Vita Biosa Probiota ayuda a restaurar una microbiota saludable, previniendo alteraciones y promoviendo el bienestar digestivo.</p>
+
+                    <div class="price">$19.800</div>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 15px;">
+                        <a href="https://wa.me/5491137752826?text=Hola!%20Me%20interesa%20pedir%20el%20VITA%20BIOSA%20Naranja%20a%20$19.800%20con%20envío%20contra%20entrega." class="btn-primary" style="background-color: #25d366; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2); text-align: center;" target="_blank">Pedir y pagar al recibir</a>
+                        <a href="https://mpago.la/2kaUxx9" class="btn-secondary" style="text-align: center; border-color: #009EE3; color: #009EE3;" target="_blank">Pagar ahora con Mercado Pago</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <a href="https://wa.me/5491137752826?text=Hola!%20Quiero%20hacer una consulta general." class="whatsapp-float" target="_blank">
@@ -1309,7 +1348,8 @@
             const urlParams = new URLSearchParams(window.location.search);
             const producto = urlParams.get('prod');
             
-            if(producto === 'magnesio' || producto === 'curcuma' || producto === 'potasio' || producto === 'aloevera') {
+            // Agregado el nuevo producto "vitabiosa"
+            if(producto === 'magnesio' || producto === 'curcuma' || producto === 'potasio' || producto === 'aloevera' || producto === 'vitabiosa') {
                 openModal(producto);
             }
         });
